@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 600px;
+  height: 100vh;
+  margin: auto;
+  background-color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container__screen {
+  background-color: green;
+  -webkit-box-flex: 100px;
+      -ms-flex: 100px 1 1;
+          flex: 100px 1 1;
+}
+
+.container__panels {
+  -webkit-box-flex: 600px;
+      -ms-flex: 600px 0 0px;
+          flex: 600px 0 0;
+  background-color: lightblue;
+}
+
+.btn-panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.btn-panel__btn {
+  width: 110px;
+  height: 110px;
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-panel__btn p {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: calc(50% - 0.5em);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.btn-panel_first {
+  background-color: orange;
+}
+
+.btn-panel_second {
+  display: none;
+}
+
+.screen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.screen input {
+  border: none;
+}
+
+.screen input:focus {
+  outline: none;
+}
+
+.screen__expression {
+  -webkit-box-flex: 10px;
+      -ms-flex: 10px 1 1;
+          flex: 10px 1 1;
+  font-size: 30px;
+}
+
+.screen__result {
+  margin-top: 2px;
+  border-top: 1px solid black;
+  -webkit-box-flex: 40px;
+      -ms-flex: 40px 0 0px;
+          flex: 40px 0 0;
+  font-size: 40px;
+}
+/*# sourceMappingURL=style.css.map */

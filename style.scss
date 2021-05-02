@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+$panel-side: 600px;
+$btn-margin: 5px;
+$btn-side: $panel-side / 5 - 2 * $btn-margin;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: $panel-side;
+  height: 100vh;
+  margin: auto;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+
+  &__screen {
+    background-color: green;
+    flex: 100px 1 1;
+  }
+
+  &__panels {
+    flex: $panel-side 0 0;
+    background-color: lightblue;
+  }
+}
+
+.btn-panel {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__btn {
+    width: $btn-side;
+    height: $btn-side;
+    margin: $btn-margin;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+
+    p {
+      font-size: 30px;
+      text-transform: uppercase;
+      text-align: center;
+      margin-top: calc(50% - 0.5em);
+      user-select: none;
+    }
+  }
+
+  &_first {
+    background-color: orange;
+  }
+
+  &_second {
+    display: none;
+  }
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    border: none;
+    &:focus {
+      outline: none;
+    }
+  }
+
+
+  &__expression {
+    flex: 10px 1 1;
+    font-size: 30px;
+  }
+  &__result {
+    margin-top: 2px;
+    border-top: 1px solid black;
+    flex: 40px 0 0 ;
+    font-size: 40px;
+  }
+}
