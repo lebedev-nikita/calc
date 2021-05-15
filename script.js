@@ -27,6 +27,8 @@ const isParensBalanced = (str) => {
 }
 
 const setExprVal = (str) => {
+  expression.value = str
+  str = str || '0'
   const last = str[str.length - 1]
   const lastChars = {
     '0': undefined,
@@ -42,9 +44,8 @@ const setExprVal = (str) => {
     '(': undefined,
     ')': undefined,
   }
-  expression.value = str
   if ((last in lastChars) && isParensBalanced(expression.value))
-    result.value = eval(expression.value)
+    result.value = eval(expression.value) || 0
 }
 
 const pushChar = (char) => () => {
@@ -56,7 +57,7 @@ const pushChar = (char) => () => {
 bp1[1].onclick = pushChar('(')
 bp1[2].onclick = pushChar(')')
 bp1[3].onclick = () => setExprVal('')
-// bp1[4].onclick = pushChar('7')
+bp1[4].onclick = () => setExprVal(expression.value.slice(0, -1))
 bp1[5].onclick = pushChar('7')
 bp1[6].onclick = pushChar('8')
 bp1[7].onclick = pushChar('9')
@@ -81,3 +82,6 @@ bp1[23].onclick = pushChar('+')
 
 
 bp2[19].onclick = selectPanel('btn-panel_first')
+
+/* === */
+setExprVal('')
