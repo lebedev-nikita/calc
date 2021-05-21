@@ -87,7 +87,7 @@ bp2[19].onclick = selectPanel('btn-panel_first')
 setExprVal('')
 
 if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js')
+  navigator.serviceWorker.register('sw.js')
     .then(() => console.log('SW registered!'))
     .catch(() => console.error('Failed to register SW'))
 }
