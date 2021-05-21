@@ -1,8 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-$panel-side: 600px;
-$btn-margin: 5px;
-$btn-side: $panel-side / 5 - 2 * $btn-margin;
+$panel-side: 100vw;
+$btn-margin: 0px;
+$btn-side: calc(#{$panel-side} / 5 - 2 * #{$btn-margin});
+$font-size: calc(#{$btn-side} / 3);
+$border-width: 1.5px;
+$light-border: $border-width solid rgba(255, 255, 255, 0.2);
+$dark-border: $border-width solid rgba(0, 0, 0, 0.4);
 
 * {
   box-sizing: border-box;
@@ -23,12 +27,13 @@ body {
   flex-direction: column;
 
   &__screen {
-    background-color: green;
-    flex: 100px 1 1;
+    background-color: black;
+    flex: 1 1;
   }
 
   &__panels {
     flex: $panel-side 0 0;
+    width: $panel-side;
     background-color: lightblue;
   }
 }
@@ -41,12 +46,14 @@ body {
     width: $btn-side;
     height: $btn-side;
     margin: $btn-margin;
-    border: 1px solid black;
-    border-radius: 5px;
+    border-top: $light-border;
+    border-left: $light-border;
+    border-bottom: $dark-border;
+    border-right: $dark-border;
     cursor: pointer;
 
     p {
-      font-size: 30px;
+      font-size: $font-size;
       text-transform: uppercase;
       text-align: center;
       margin-top: calc(50% - 0.5em);
@@ -73,7 +80,6 @@ body {
       outline: none;
     }
   }
-
 
   &__expression {
     flex: 10px 1 1;

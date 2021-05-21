@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-  width: 600px;
+  width: 100vw;
   height: 100vh;
   margin: auto;
   background-color: #333;
@@ -25,16 +25,17 @@ body {
 }
 
 .container__screen {
-  background-color: green;
-  -webkit-box-flex: 100px;
-      -ms-flex: 100px 1 1;
-          flex: 100px 1 1;
+  background-color: black;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
 }
 
 .container__panels {
-  -webkit-box-flex: 600px;
-      -ms-flex: 600px 0 0px;
-          flex: 600px 0 0;
+  -webkit-box-flex: 100vw;
+      -ms-flex: 100vw 0 0px;
+          flex: 100vw 0 0;
+  width: 100vw;
   background-color: lightblue;
 }
 
@@ -47,16 +48,18 @@ body {
 }
 
 .btn-panel__btn {
-  width: 110px;
-  height: 110px;
-  margin: 5px;
-  border: 1px solid black;
-  border-radius: 5px;
+  width: calc(100vw / 5 - 2 * 0px);
+  height: calc(100vw / 5 - 2 * 0px);
+  margin: 0px;
+  border-top: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.4);
+  border-right: 1.5px solid rgba(0, 0, 0, 0.4);
   cursor: pointer;
 }
 
 .btn-panel__btn p {
-  font-size: 30px;
+  font-size: calc(calc(100vw / 5 - 2 * 0px) / 3);
   text-transform: uppercase;
   text-align: center;
   margin-top: calc(50% - 0.5em);
